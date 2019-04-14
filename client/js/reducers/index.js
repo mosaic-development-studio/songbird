@@ -1,34 +1,56 @@
 import {
-    PAUSE,
-    PLAY,
+    RESET_CURRENT_TIME,
+    SET_BEAT_VALUE,
+    SET_BEATS_PER_MEASURE,
     SET_TEMPO,
     SET_TIME_SIGNATURE,
     STOP,
-    TOGGLE_NOTE_INPUT_TYPE
+    TOGGLE_NOTE_INPUT_TYPE,
+    TOGGLE_PLAY_STATE
 } from '../constants/actions';
 
 const initialState = {
     currentTime: 0,
     erase: false,
-    playing: false,
+    isPlaying: false,
     tempo: 100,
     timeSignature: {
-        beat: 4,
-        bar: 4
+        beatsPerMeasure: 4,
+        beatValue: 4
     }
+};
+
+const resetCurrentTime = state => {
+    return {
+        ...state,
+        currentTime: 0
+    };
+}
+
+const setBeatValue = (state, action) => {
+    return {
+        ...state,
+        timeSignature: {
+            ...state.timeSignature,
+            beatValue: +action.beatValue
+        }
+    };
+};
+
+const setBeatsPerMeasure = (state, action) => {
+    return {
+        ...state,
+        timeSignature: {
+            ...state.timeSignature,
+            beatsPerMeasure: +action.beatsPerMeasure
+        }
+    };
 };
 
 const setTempo = (state, action) => {
     return {
         ...state,
-        tempo: action.tempo
-    };
-};
-
-const setTimeSignature = (state, action) => {
-    return {
-        ...state,
-        timeSignature: action.timeSignature
+        tempo: +action.tempo
     };
 };
 
@@ -36,7 +58,7 @@ const stop = state => {
     return {
         ...state,
         currentTime: 0,
-        playing: false
+        isPlaying: false
     };
 };
 
@@ -47,26 +69,29 @@ const toggleNoteInputType = state => {
     };
 };
 
-const toggleStateOfPlay = state => {
+const togglePlayState = state => {
     return {
         ...state,
-        playing: !state.playing
+        isPlaying: !state.isPlaying
     };
 };
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case PAUSE:
-        case PLAY:
-            return toggleStateOfPlay(state);
+        case RESET_CURRENT_TIME:
+            return resetCurrentTime(state);
+        case SET_BEAT_VALUE:
+            return setBeatValue(state, action);
+        case SET_BEATS_PER_MEASURE:
+            return setBeatsPerMeasure(state, action);
         case SET_TEMPO:
             return setTempo(state, action);
-        case SET_TIME_SIGNATURE:
-            return setTimeSignature(state, action);
         case STOP:
             return stop(state);
         case TOGGLE_NOTE_INPUT_TYPE:
             return toggleNoteInputType(state);
+        case TOGGLE_PLAY_STATE:
+            return togglePlayState(state);
         default:
             return state;
     }

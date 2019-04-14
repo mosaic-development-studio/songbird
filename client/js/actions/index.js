@@ -1,33 +1,36 @@
 import {
-    PAUSE,
-    PLAY,
+    RESET_CURRENT_TIME,
+    SET_BEAT_VALUE,
+    SET_BEATS_PER_MEASURE,
     SET_TEMPO,
-    SET_TIME_SIGNATURE,
     STOP,
-    TOGGLE_NOTE_INPUT_TYPE
+    TOGGLE_NOTE_INPUT_TYPE,
+    TOGGLE_PLAY_STATE
 } from '../constants/actions';
 
-export const pause = () => ({
-    type: PAUSE
-});
+export const resetCurrentTime = () => ({ type: RESET_CURRENT_TIME });
 
-export const play = () => ({
-    type: PLAY
-});
+export const selectEraser = () => ({ type: SELECT_ERASER });
+
+export const selectNoteInput = () => ({ type: SELECT_NOTE_INPUT });
 
 export const setTempo = tempo => ({
     type: SET_TEMPO,
     tempo
 });
 
-export const setTimeSignature = timeSignature => ({
-    type: SET_TIME_SIGNATURE,
-    timeSignature
-});
-export const stop = () => ({
-    type: STOP
+export const setBeatValue = beatValue => ({
+    type: SET_BEAT_VALUE,
+    beatValue
 });
 
-export const  toggleNoteInputType = () => ({
-    type: TOGGLE_NOTE_INPUT_TYPE
+export const setBeatsPerMeasure = beatsPerMeasure => ({
+    type: SET_BEATS_PER_MEASURE,
+    beatsPerMeasure
 });
+
+export const stop = () => ({ type: STOP });
+
+export const toggleNoteInputType = () => ({ type: TOGGLE_NOTE_INPUT_TYPE });
+
+export const togglePlayState = () => ({ type: TOGGLE_PLAY_STATE });

@@ -1,6 +1,7 @@
-export const PAUSE = 'PAUSE';
-export const PLAY = 'PLAY';
+export const RESET_CURRENT_TIME = 'RESET_CURRENT_TIME';
+export const SET_BEAT_VALUE = 'SET_BEAT_VALUE';
+export const SET_BEATS_PER_MEASURE = 'SET_BEATS_PER_MEASURE';
 export const SET_TEMPO = 'SET_TEMPO';
-export const SET_TIME_SIGNATURE = 'SET_TIME_SIGNATURE';
 export const STOP = 'STOP';
 export const TOGGLE_NOTE_INPUT_TYPE = 'TOGGLE_NOTE_INPUT_TYPE';
+export const TOGGLE_PLAY_STATE = 'TOGGLE_PLAY_STATE';

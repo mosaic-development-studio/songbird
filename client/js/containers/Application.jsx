@@ -1,4 +1,4 @@
-import { ActionBar } from '../components/ActionBar';
+import ActionBar from '../components/ActionBar';
 import { Provider } from 'react-redux';
 import React from 'react';
 
