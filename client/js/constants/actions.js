@@ -1,3 +1,5 @@
+export const ADD_NOTE = 'ADD_NOTE';
+export const REMOVE_NOTE = 'REMOVE_NOTE';
 export const RESET_CURRENT_TIME = 'RESET_CURRENT_TIME';
 export const SET_BEAT_VALUE = 'SET_BEAT_VALUE';
 export const SET_BEATS_PER_MEASURE = 'SET_BEATS_PER_MEASURE';

@@ -76,7 +76,7 @@ const mapDispatchToProps = {
 };
 
 const mapStateToProps = state => {
-    const { isPlaying, tempo, timeSignature } = state;
+    const { isPlaying, tempo, timeSignature } = state.playbackController;
 
     return {
         inputTypeLabel: setInputTypeLabel(state),
