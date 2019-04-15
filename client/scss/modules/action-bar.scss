@@ -1,0 +1,7 @@
+@import '../mixins/button';
+
+.action-bar {
+    &__button {
+        @include button();
+    }
+}

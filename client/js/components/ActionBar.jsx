@@ -38,7 +38,7 @@ const ActionBar = props => {
                 defaultValue={tempo}
                 disabled={isPlaying}
                 onChange={e => setTempo(e.target.value)}
-                pattern="[09]"
+                pattern="[0-9]"
                 type="number"
             />
             <div className="action-bar__time-signature-input">
