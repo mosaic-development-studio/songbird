@@ -1,9 +1,24 @@
-import { createStore } from 'redux';
-import { reducer } from './reducers'
+import { Provider } from 'react-redux';
+import { Application } from './containers/Application';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { store } from './store';
 
-const store = createStore(
-    reducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+function start(config) {
+    const {
+        appRootElement,
+        BaseApp,
+        store
+    } = config;
 
-store.subscribe(() => console.log(store.getState()));
+    ReactDOM.render(
+        <BaseApp store={store}/>,
+        appRootElement
+    );
+}
+
+start({
+    appRootElement: document.getElementById('root'),
+    BaseApp: Application,
+    store
+});
