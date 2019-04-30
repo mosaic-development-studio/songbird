@@ -13,10 +13,15 @@
         "ecmaVersion": 8,
         "sourceType": "module"
     },
+    "parser": "babel-eslint",
     "plugins": [
-        "html"
+        "react"
     ],
     "rules": {
-        "no-floating-decimal": 1
+        "no-floating-decimal": 1,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/react-in-jsx-scope": 2,
+        "strict": [2, "never"]
     }
 }

@@ -1,4 +1,3 @@
-import { Provider } from 'react-redux';
 import { Application } from './containers/Application';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,10 +10,7 @@ function start(config) {
         store
     } = config;
 
-    ReactDOM.render(
-        <BaseApp store={store}/>,
-        appRootElement
-    );
+    ReactDOM.render(<BaseApp store={store}/>, appRootElement);
 }
 
 start({

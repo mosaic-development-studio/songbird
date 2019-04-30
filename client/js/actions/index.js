@@ -10,10 +10,6 @@ import {
 
 export const resetCurrentTime = () => ({ type: RESET_CURRENT_TIME });
 
-export const selectEraser = () => ({ type: SELECT_ERASER });
-
-export const selectNoteInput = () => ({ type: SELECT_NOTE_INPUT });
-
 export const setTempo = tempo => ({
     type: SET_TEMPO,
     tempo
