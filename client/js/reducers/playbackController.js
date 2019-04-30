@@ -3,7 +3,6 @@ import {
     SET_BEAT_VALUE,
     SET_BEATS_PER_MEASURE,
     SET_TEMPO,
-    SET_TIME_SIGNATURE,
     STOP,
     TOGGLE_NOTE_INPUT_TYPE,
     TOGGLE_PLAY_STATE
@@ -25,7 +24,7 @@ const resetCurrentTime = state => {
         ...state,
         currentTime: 0
     };
-}
+};
 
 const setBeatValue = (state, action) => {
     return {

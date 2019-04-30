@@ -18,14 +18,14 @@ const addNote = (state, action) => {
 function removeNote(noteDetails) {
     return noteDetails.note !== this.noteDetails.note
         && noteDetails.position !== this.noteDetails.position;
-};
+}
 
 export const sketch = (state = initialState, action) => {
     switch (action.type) {
         case ADD_NOTE:
             return addNote(state, action);
         case REMOVE_NOTE:
-            return state.filter(removeNote, action.noteDetails)
+            return state.filter(removeNote, action.noteDetails);
         default:
             return state;
     }

@@ -36,9 +36,9 @@ class Synthesizer {
         this.initialize();
     }
 
-    set masterVolume() {
-        // sets overall volume node
-    }
+    // set masterVolume() {
+    //     // sets overall volume node
+    // }
 
     createOscillator(oscillatorConfig) {
         const oscillator = this.audioContext.createOscillator();
@@ -90,4 +90,4 @@ const config = {
     ]
 };
 
-const synth = new Synthesizer(config);
+export const synth = new Synthesizer(config);
