@@ -5,3 +5,5 @@ export const createSelectOptions = (value, keyString = '') => {
         <option className={value} key={keyString + value}>{value}</option>
     );
 };
+
+export const createComponentList = (Component, count) => Array(count).fill(Component);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Bar = props => {
+export const Bar = props => {
     const { bar } = props;
 
     return (
