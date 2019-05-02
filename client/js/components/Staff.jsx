@@ -3,17 +3,23 @@ import { connect } from 'react-redux';
 import { createComponentList } from '../lib/react-utils';
 import { DEFAULT_BAR_COUNT } from '../constants/constants';
 import { getTimeSignature } from '../selectors';
+import { positionsPerBar } from '../lib/position-utils';
 import React from 'react';
 
 export const Staff = props => {
-    const {
-        timeSignature: { beatValue, beatsPerBar }
-    } = props;
+    const { timeSignature } = props;
 
     return (
         <div id="staff" className="staff">
             {createComponentList(Bar, DEFAULT_BAR_COUNT).map((Bar, i) => {
-                return <Bar key={'bar-' + (i + 1)}/>
+                const barNumber = i + 1;
+
+                return (
+                    <Bar
+                        key={`bar-${barNumber}`}
+                        positionCount={positionsPerBar(timeSignature)}
+                    />
+                );
             })}
         </div>
     );

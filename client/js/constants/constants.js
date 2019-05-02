@@ -35,4 +35,6 @@ export const NOTE_TABLE = {
     '64': 'C'
 };
 
+export const NOTE_TABLE_KEYS = Object.keys(NOTE_TABLE);
+export const NOTE_TABLE_LENGTH = NOTE_TABLE_KEYS.length;
 export const POSITION_BEAT_VALUE = 16;
