@@ -1,14 +1,14 @@
 import { createComponentList } from '../lib/react-utils';
-import { Position } from './Position';
+import { Subdivision } from './Subdivision';
 import React from 'react';
 
 export const Bar = props => {
-    const { positionCount } = props;
+    const { subdivisions } = props;
 
     return (
         <div className="bar">
-            {createComponentList(Position, positionCount).map((Position, i) => {
-                return <Position key={'position-' + i} position={i}/>
+            {createComponentList(Subdivision, subdivisions).map((Subdivision, i) => {
+                return <Subdivision key={'subdivision-' + i} subdivision={i}/>
             })}
         </div>
     );
