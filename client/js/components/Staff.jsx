@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createComponentList } from '../lib/react-utils';
 import { DEFAULT_BAR_COUNT } from '../constants/constants';
 import { getTimeSignature } from '../selectors';
-import { positionsPerBar } from '../lib/position-utils';
+import { subdivisionsPerBar } from '../lib/subdivision-utils';
 import React from 'react';
 
 export const Staff = props => {
@@ -17,7 +17,7 @@ export const Staff = props => {
                 return (
                     <Bar
                         key={`bar-${barNumber}`}
-                        positionCount={positionsPerBar(timeSignature)}
+                        subdivisions={subdivisionsPerBar(timeSignature)}
                     />
                 );
             })}

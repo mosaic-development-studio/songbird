@@ -1,10 +1,10 @@
-export const BEAT_NOTE_VALUES = [1, 2, 4, 8, 16];
+export const BEAT_VALUES = [1, 2, 4, 8, 16];
 export const BEATS_PER_MEASURE_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 export const DEFAULT_BAR_COUNT = 8;
 
 // TODO: replace with frequencies
 // https://en.wikipedia.org/wiki/Piano_key_frequencies
-export const NOTE_TABLE = {
+export const PITCH_TABLE = {
     '37': 'A',
     '38': 'A#',
     '39': 'B',
@@ -35,6 +35,6 @@ export const NOTE_TABLE = {
     '64': 'C'
 };
 
-export const NOTE_TABLE_KEYS = Object.keys(NOTE_TABLE);
-export const NOTE_TABLE_LENGTH = NOTE_TABLE_KEYS.length;
-export const POSITION_BEAT_VALUE = 16;
+export const PITCH_TABLE_KEYS = Object.keys(PITCH_TABLE);
+export const PITCH_TABLE_LENGTH = PITCH_TABLE_KEYS.length;
+export const SUBDIVISION_BEAT_TYPE = 16;

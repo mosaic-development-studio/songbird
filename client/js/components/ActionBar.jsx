@@ -1,4 +1,4 @@
-import { BEAT_NOTE_VALUES, BEATS_PER_MEASURE_VALUES } from '../constants/constants';
+import { BEAT_VALUES, BEATS_PER_MEASURE_VALUES } from '../constants/constants';
 import { connect } from 'react-redux';
 import { createSelectOptions } from '../lib/react-utils';
 import {
@@ -9,7 +9,7 @@ import {
     stop,
     toggleNoteInputType,
     togglePlayState
-} from '../actions';
+} from '../actions/playbackController';
 import React from 'react';
 import { setInputTypeLabel, setPlayStateButtonLabel } from '../selectors';
 
@@ -53,7 +53,7 @@ const ActionBar = props => {
                     disabled={isPlaying}
                     onChange={e => setBeatValue(e.target.value)}
                     value={timeSignature.beatValue}>
-                    {BEAT_NOTE_VALUES.map(createSelectOptions)}
+                    {BEAT_VALUES.map(createSelectOptions)}
                 </select>
             </div>
             <button
