@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Note = props => {
-    const { note, position } = props;
+    const { note } = props;
 
     return (
         <div className="note">{note}</div>

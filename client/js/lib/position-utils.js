@@ -1,4 +1,4 @@
-import { POSITION_BEAT_VALUE } from '../constants';
+import { POSITION_BEAT_VALUE } from '../constants/constants';
 
 export const positionsPerBar = timeSignature => {
     const { beatsPerMeasure, beatValue } = timeSignature;
