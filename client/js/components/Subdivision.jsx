@@ -1,25 +1,21 @@
 import { createComponentList } from '../lib/react-utils';
-import { Pitch } from './Pitch';
-import { PITCH_TABLE, PITCH_TABLE_KEYS, PITCH_TABLE_LENGTH } from '../constants/constants';
+import Pitch from './Pitch';
+import { PITCH_TABLE, REVERSED_PITCH_TABLE_KEYS } from '../constants/constants';
 import React from 'react';
 
 export const Subdivision = props => {
-    const { subdivision } = props;
+    const { subdivision, subdivisions } = props;
+    const pitch = PITCH_TABLE[REVERSED_PITCH_TABLE_KEYS[subdivision]];
 
     return (
-        <ul className="subdivision" subdivision={subdivision}>
-            {createComponentList(Pitch, PITCH_TABLE_LENGTH).map((Pitch, i) => {
-                const key = PITCH_TABLE_KEYS[i];
-                const pitch = PITCH_TABLE[key];
-
+        <tr>
+            {createComponentList(Pitch, subdivisions).map((Pitch, i) => {
                 return (
-                    <li key={key}>
-                        <Pitch
-                            pitch={pitch}
-                        />
-                    </li>
+                    <td className="subdivision" key={i}>
+                        <Pitch pitch={pitch} subdivision={i}/>
+                    </td>
                 );
             })}
-        </ul>
+        </tr>
     );
 };

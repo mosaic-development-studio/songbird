@@ -1,3 +1,5 @@
+import { createReversedArray } from '../lib/utils';
+
 export const BEAT_VALUES = [1, 2, 4, 8, 16];
 export const BEATS_PER_MEASURE_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 export const DEFAULT_BAR_COUNT = 8;
@@ -37,4 +39,5 @@ export const PITCH_TABLE = {
 
 export const PITCH_TABLE_KEYS = Object.keys(PITCH_TABLE);
 export const PITCH_TABLE_LENGTH = PITCH_TABLE_KEYS.length;
+export const REVERSED_PITCH_TABLE_KEYS = createReversedArray(PITCH_TABLE_KEYS);
 export const SUBDIVISION_BEAT_TYPE = 16;
