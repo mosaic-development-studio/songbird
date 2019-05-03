@@ -2,7 +2,9 @@ export const getTimeSignature = ({ playbackController }) => playbackController.t
 
 export const getNoteStatus = (state, props) => {
     return state.sketch.some(noteDetails => {
-        return noteDetails.pitch === props.pitch && noteDetails.subdivision === props.subdivision;
+        return noteDetails.bar === props.bar
+            && noteDetails.pitch === props.pitch
+            && noteDetails.subdivision === props.subdivision;
     });
 };
 

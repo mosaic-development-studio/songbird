@@ -5,14 +5,15 @@ import React from 'react';
 
 export const Subdivision = props => {
     const { bar, subdivision, subdivisions } = props;
-    const pitch = PITCH_TABLE[REVERSED_PITCH_TABLE_KEYS[subdivision]];
+    const pitch = REVERSED_PITCH_TABLE_KEYS[subdivision];
+    const pitchName = PITCH_TABLE[pitch]
 
     return (
-        <tr>
+        <tr className="subdivision-row">
             {createComponentList(Pitch, subdivisions).map((Pitch, i) => {
                 return (
                     <td className="subdivision" key={i}>
-                        <Pitch bar={bar} pitch={pitch} subdivision={i}/>
+                        <Pitch bar={bar} pitch={pitch} pitchName={pitchName} subdivision={i}/>
                     </td>
                 );
             })}
