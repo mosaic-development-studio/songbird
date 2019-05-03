@@ -12,11 +12,12 @@ export const Staff = props => {
     return (
         <div id="staff" className="staff">
             {createComponentList(Bar, DEFAULT_BAR_COUNT).map((Bar, i) => {
-                const barNumber = i + 1;
+                const bar = i + 1;
 
                 return (
                     <Bar
-                        key={`bar-${barNumber}`}
+                        bar={bar}
+                        key={`bar-${bar}`}
                         subdivisions={subdivisionsPerBar(timeSignature)}
                     />
                 );

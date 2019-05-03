@@ -4,7 +4,7 @@ import { Subdivision } from './Subdivision';
 import React from 'react';
 
 export const Bar = props => {
-    const { subdivisions } = props;
+    const { bar, subdivisions } = props;
 
     return (
         <table className="bar">
@@ -12,6 +12,7 @@ export const Bar = props => {
                 {createComponentList(Subdivision, PITCH_TABLE_LENGTH).map((Subdivision, i) => {
                     return (
                         <Subdivision
+                            bar={bar}
                             key={'subdivision-' + i}
                             subdivision={i}
                             subdivisions={subdivisions}

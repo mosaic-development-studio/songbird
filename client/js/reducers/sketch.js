@@ -16,7 +16,8 @@ const addNote = (state, action) => {
 };
 
 function removeNote(noteDetails) {
-    return noteDetails.pitch !== this.pitch
+    return noteDetails.bar !== this.bar
+        && noteDetails.pitch !== this.pitch
         && noteDetails.subdivision !== this.subdivision;
 }
 
