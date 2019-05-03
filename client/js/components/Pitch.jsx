@@ -4,13 +4,13 @@ import { getNoteStatus } from '../selectors';
 import React from 'react';
 
 export const Pitch = props => {
-    const { active, handleNoteEntry, pitch, subdivision } = props;
+    const { active, bar, handleNoteEntry, pitch, subdivision } = props;
     const className = `pitch${active ? '--active' : ''}`;
 
     return (
         <div
             className={className}
-            onClick={() => handleNoteEntry({ pitch, subdivision }, active)}
+            onClick={() => handleNoteEntry({ bar, pitch, subdivision }, active)}
         >
             {pitch}
         </div>
