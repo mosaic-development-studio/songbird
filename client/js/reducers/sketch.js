@@ -16,8 +16,8 @@ const addNote = (state, action) => {
 };
 
 function removeNote(noteDetails) {
-    return noteDetails.note !== this.noteDetails.note
-        && noteDetails.position !== this.noteDetails.position;
+    return noteDetails.pitch !== this.pitch
+        && noteDetails.subdivision !== this.subdivision;
 }
 
 export const sketch = (state = initialState, action) => {

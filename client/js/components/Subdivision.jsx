@@ -1,5 +1,5 @@
 import { createComponentList } from '../lib/react-utils';
-import { Pitch } from './Pitch';
+import Pitch from './Pitch';
 import { PITCH_TABLE, REVERSED_PITCH_TABLE_KEYS } from '../constants/constants';
 import React from 'react';
 
@@ -12,7 +12,7 @@ export const Subdivision = props => {
             {createComponentList(Pitch, subdivisions).map((Pitch, i) => {
                 return (
                     <td className="subdivision" key={i}>
-                        <Pitch pitch={pitch}/>
+                        <Pitch pitch={pitch} subdivision={i}/>
                     </td>
                 );
             })}
