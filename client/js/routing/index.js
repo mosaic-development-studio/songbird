@@ -2,7 +2,7 @@ import { BASE64_REGEX } from '../constants/constants';
 
 const convertBase64StringToState = base64String => JSON.parse(atob(base64String));
 
-const convertStateToBase64String = state => btoa(JSON.stringify(state));
+export const convertStateToBase64String = state => btoa(JSON.stringify(state));
 
 const getLocationPathname = () => window.location.pathname;
 
@@ -10,7 +10,7 @@ const isBase64Valid = base64Data => BASE64_REGEX.test(base64Data);
 
 const isValidJSONString = string => {
     try {
-        JSON.parse(string);
+        convertBase64StringToState(string);
     }
 
     catch(e) {
