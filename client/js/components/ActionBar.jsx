@@ -32,7 +32,7 @@ const ActionBar = props => {
         <section id="actionBar" className="action-bar">
             <button className="action-bar__button" onClick={togglePlayState}>{playStateButtonLabel}</button>
             <button className="action-bar__button" onClick={resetCurrentTime}>Reset</button>
-            <button className="action-bar__button" onClick={stop}>Stop</button>
+            <button className="action-bar__button" onClick={stop}>■</button>
             <input
                 className="action-bar__tempo-input"
                 defaultValue={tempo}
@@ -57,7 +57,7 @@ const ActionBar = props => {
                 </select>
             </div>
             <button
-                className="action-bar__button--input-toggle"
+                className="action-bar__button action-bar__button--input-toggle"
                 onClick={toggleNoteInputType}>
                 {inputTypeLabel}
             </button>

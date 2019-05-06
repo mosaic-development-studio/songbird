@@ -1,12 +1,9 @@
 @import '../modules/constants';
 
 @mixin button() {
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: $box-shadow;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
     display: inline-block;
-    margin: 1rem;
-    padding: 50px;
     position: relative;
     transition: $transition;
 }
