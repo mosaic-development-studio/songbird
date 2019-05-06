@@ -1,16 +1,20 @@
 @import '../mixins/button';
 
 .action-bar {
+    background-color: #fff;
     bottom: 0;
-    margin: 25px 0;
+    font-size: $action-bar-font-size;
+    padding: 25px 0;
     position: fixed;
     text-align: center;
     width: 100%;
 
     &__button,
     &__tempo-input,
-    &__time-signature-input {
+    &__time-signature-input,
+    &__time-signature-input select {
         display: inline-block;
+        font-size: $action-bar-font-size;
     }
 
     &__button {

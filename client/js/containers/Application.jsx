@@ -8,9 +8,9 @@ export const Application = props => {
 
     return (
         <Provider store={store}>
-            {false && <div className="staff-wrapper">
+            <div className="staff-wrapper">
                 <Staff/>
-            </div>}
+            </div>
             <ActionBar/>
         </Provider>
     );

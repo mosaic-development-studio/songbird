@@ -1,12 +1,7 @@
 .subdivision-row {
-    line-height: 5px;
-
     .subdivision {
-        border: 1px solid #979797;
         cursor: pointer;
-        display: inline-block;
-        font-size: 5px;
-        height: 5px;
-        width: 5px;
+        display: table-cell;
+        padding: 0;
     }
 }

@@ -24,13 +24,6 @@ export const DEFAULT_SKETCH_STATE = {
 // TODO: replace with frequencies
 // https://en.wikipedia.org/wiki/Piano_key_frequencies
 export const PITCH_TABLE = {
-    '37': 'A',
-    '38': 'A#',
-    '39': 'B',
-    '40': 'C',
-    '41': 'C#',
-    '42': 'D',
-    '43': 'D#',
     '44': 'E',
     '45': 'F',
     '46': 'F#',

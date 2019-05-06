@@ -1,3 +1,9 @@
 .bar {
+    border-collapse: collapse;
+    border-spacing: 0;
     display: inline-block;
+
+    &:not(:last-child) {
+        border-right: 1px solid #000;
+    }
 }
