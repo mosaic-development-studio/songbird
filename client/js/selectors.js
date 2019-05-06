@@ -10,4 +10,4 @@ export const getNoteStatus = (state, props) => {
 
 export const setInputTypeLabel = ({ erase }) => erase ? 'cursor' : 'eraser';
 
-export const setPlayStateButtonLabel = ({ isPlaying }) => isPlaying ? 'pause' : 'play';
+export const setPlayStateButtonLabel = ({ isPlaying }) => isPlaying ? 'pause' : '►';
